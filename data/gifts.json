@@ -1,0 +1,722 @@
+[
+  {
+    "name": "Apple AirPods Pro 2",
+    "category": "digital",
+    "price_range": "1500+",
+    "price": "¥1,899",
+    "image": "https://img.nga.178.com/attachments/mon_202405/19/c4Q8z9x-fl2hK2qT1kShs-12h.jpg",
+    "tags": [
+      "valentine",
+      "男生"
+    ],
+    "description": "主动降噪耳机，通话清晰，适合通勤或游戏。",
+    "reason": "实用且高级，适合喜欢科技感的男友。",
+    "source": "天猫热销"
+  },
+  {
+    "name": "Nintendo Switch OLED",
+    "category": "digital",
+    "price_range": "1500+",
+    "price": "¥2,399",
+    "image": "https://switch-cn.gtgres.com/home/_dynamic/img/6f72b46.jpg",
+    "reason": "情侣可一起玩，增进感情的游戏机会。",
+    "description": "高清屏幕游戏机，支持多人同玩。",
+    "source": "抖音爆款",
+    "tags": [
+      "valentine",
+      "男生"
+    ]
+  },
+  {
+    "name": "Bose SoundLink Flex 蓝牙音箱",
+    "category": "digital",
+    "price_range": "500-1500",
+    "price": "¥899",
+    "image": "https://cbu01.alicdn.com/img/ibank/O1CN01lkfw472HgxDuJHrhM_!!2217682789181-0-cib.310x310.jpg",
+    "reason": "音质出色，防水耐用，适合户外和运动。",
+    "description": "便携防水音箱，蓝牙连接稳定。",
+    "source": "知乎推荐",
+    "tags": [
+      "valentine",
+      "男生"
+    ]
+  },
+  {
+    "name": "LEGO Technic 法拉利 Daytona SP3",
+    "category": "accessory",
+    "price_range": "1500+",
+    "price": "¥3,799",
+    "image": "https://files.nowre.com/articles/2022/05/微信图片_20220527132405.png",
+    "reason": "机械细节丰富，适合爱车的型男。",
+    "description": "高难度积木模型，拼装后极具收藏价值。",
+    "source": "小红书热门",
+    "tags": [
+      "valentine",
+      "男生"
+    ]
+  },
+  {
+    "name": "Dior 真我香水 (J'adore)",
+    "category": "beauty",
+    "price_range": "500-1500",
+    "price": "¥1,180",
+    "image": "https://gd-hbimg.huaban.com/3ea8a14964d7d10ed447d46c84c0750f186fb68b2d06a-BrHjwV_fw658webp",
+    "reason": "经典花香调，优雅高贵，适合女友日常。",
+    "description": "花果香调香水，瓶身设计精致。",
+    "source": "天猫热销",
+    "tags": [
+      "valentine",
+      "女生"
+    ]
+  },
+  {
+    "name": "Pandora 银色串珠手链",
+    "category": "accessory",
+    "price_range": "300-500",
+    "price": "¥429",
+    "image": "https://gd-hbimg.huaban.com/958bc31431ddce96dec30502602a0b7c0deb6e961fe20-7Tksxl_fw658webp",
+    "reason": "可个性化搭配，适合表达心意。",
+    "description": "925银手链，可添加吊坠创意组合。",
+    "source": "小红书热门",
+    "tags": [
+      "valentine",
+      "女生"
+    ]
+  },
+  {
+    "name": "L'Occitane 樱花沐浴礼盒",
+    "category": "beauty",
+    "price_range": "100-300",
+    "price": "¥290",
+    "image": "http://pic1.yangmatou.com/G03/shangou/M09/B8/B7/CgzUIF-r2_mAKCnrAAOMfYCQz1E273_1_1_n_w_o.jpg",
+    "reason": "全套身体护理，提升情侣仪式感。",
+    "description": "樱花香沐浴露、润肤乳等礼盒装。",
+    "source": "抖音爆款",
+    "tags": [
+      "valentine",
+      "女生"
+    ]
+  },
+  {
+    "name": "手工DIY 永生花玻璃罩",
+    "category": "custom",
+    "price_range": "0-100",
+    "price": "¥89",
+    "image": "https://img.alicdn.com/bao/uploaded/i2/1874091910/O1CN018B4cvl1Pyp8LQrDxU_!!1874091910.jpg_500x500q90.jpg",
+    "reason": "亲手制作更显心意，适合预算有限。",
+    "description": "干花材料包，含工具教程，可摆桌面。",
+    "source": "知乎推荐",
+    "tags": [
+      "valentine",
+      "女生"
+    ]
+  },
+  {
+    "name": "Nike Dri-FIT 运动T恤",
+    "category": "accessory",
+    "price_range": "100-300",
+    "price": "¥249",
+    "image": "https://img.alicdn.com/bao/uploaded/i3/17279651/O1CN01agFpxn2LADLuK4Bfe_!!0-item_pic.jpg",
+    "tags": [
+      "birthday",
+      "男生",
+      "运动",
+      "服饰"
+    ],
+    "description": "吸汗速干面料，适合健身和日常穿着。",
+    "reason": "运动爱好者的必备单品，性价比高。",
+    "source": "小红书热门"
+  },
+  {
+    "name": "罗技 G Pro X 游戏耳机",
+    "category": "digital",
+    "price_range": "500-1500",
+    "price": "¥899",
+    "image": "https://imgslim.geekpark.net/uploads/image/file/42/42/42427e218a6c3497025dd1f71fd23e7d.jpg",
+    "tags": [
+      "birthday",
+      "男生",
+      "游戏",
+      "耳机"
+    ],
+    "description": "专业级音效、可拆卸麦克风，适合电竞玩家。",
+    "reason": "提升游戏体验，适合生日惊喜。",
+    "source": "抖音爆款"
+  },
+  {
+    "name": "Levi's 男士牛仔裤",
+    "category": "accessory",
+    "price_range": "300-500",
+    "price": "¥399",
+    "image": "https://img.alicdn.com/bao/uploaded/i1/648580690/O1CN01DT9xfI1Gy48jiqwb7_!!0-item_pic.jpg",
+    "tags": [
+      "birthday",
+      "男生",
+      "潮牌",
+      "服饰"
+    ],
+    "description": "经典501系列，耐磨舒适，百搭时尚。",
+    "reason": "实用且时尚，适合日常穿搭。",
+    "source": "知乎推荐"
+  },
+  {
+    "name": "Dior Sauvage 香水",
+    "category": "beauty",
+    "price_range": "500-1500",
+    "price": "¥750",
+    "image": "https://files.nowre.com/articles/2022/03/58803F95-E836-4B78-9060-6A4CCC73D5D1.jpeg",
+    "tags": [
+      "birthday",
+      "女生",
+      "香水",
+      "美妆"
+    ],
+    "description": "清新木质香调，适合日常和约会使用。",
+    "reason": "经典香水，提升气质，适合送给精致女生。",
+    "source": "小红书热门"
+  },
+  {
+    "name": "潘多拉 925银手链",
+    "category": "accessory",
+    "price_range": "500-1500",
+    "price": "¥899",
+    "image": "https://gd-hbimg.huaban.com/b64ea71dc6076575e5c10a7ddb14e9c938e8e5564d76a-aYOnDy_fw658",
+    "tags": [
+      "birthday",
+      "女生",
+      "首饰",
+      "礼物"
+    ],
+    "description": "可搭配多种吊饰，打造专属风格。",
+    "reason": "个性化饰品，寓意深刻。",
+    "source": "天猫热销"
+  },
+  {
+    "name": "Yankee Candle 大号香薰",
+    "category": "home",
+    "price_range": "100-300",
+    "price": "¥199",
+    "image": "https://img11.360buyimg.com/cms/jfs/t1/180306/20/4634/313654/60a23d1dEf756d86f/7c04bab16357d519.jpg",
+    "tags": [
+      "birthday",
+      "女生",
+      "家居",
+      "香氛"
+    ],
+    "description": "多种香型可选，燃烧时间长，营造温馨氛围。",
+    "reason": "实用家居好物，提升生活幸福感。",
+    "source": "小红书热门"
+  },
+  {
+    "name": "手工羊毛毡DIY套装",
+    "category": "custom",
+    "price_range": "0-100",
+    "price": "¥89",
+    "image": "https://img.alicdn.com/bao/uploaded/i2/1653670425/O1CN01W7ChTQ1F0h3oYrlXM_!!1653670425.jpg",
+    "tags": [
+      "birthday",
+      "女生",
+      "手工",
+      "创意"
+    ],
+    "description": "包含工具和教程，可制作小动物公仔。",
+    "reason": "培养动手能力，适合喜欢手工的女生。",
+    "source": "抖音爆款"
+  },
+  {
+    "name": "Sony WH-1000XM5 无线降噪耳机",
+    "category": "digital",
+    "price_range": "1500+",
+    "price": "¥2499",
+    "image": "https://pic4.zhimg.com/v2-a83081d158dad0b40615a29cd8f3ea03_r.jpg",
+    "tags": [
+      "anniversary",
+      "男生",
+      "耳机",
+      "降噪"
+    ],
+    "description": "顶级降噪耳机，音质出色，适合日常通勤和游戏。",
+    "reason": "实用性强，提升生活品质，适合科技爱好者。",
+    "source": "知乎推荐"
+  },
+  {
+    "name": "Nintendo Switch OLED 游戏主机",
+    "category": "digital",
+    "price_range": "1500+",
+    "price": "¥2599",
+    "image": "https://switch-cn.gtgres.com/home/_dynamic/img/f1f1f98.jpg",
+    "tags": [
+      "anniversary",
+      "男生",
+      "游戏",
+      "主机"
+    ],
+    "description": "便携游戏机，支持多人同乐，经典周年礼物。",
+    "reason": "共同娱乐，增进感情，适合游戏迷。",
+    "source": "天猫热销"
+  },
+  {
+    "name": "Apple Watch Series 9 智能手表",
+    "category": "digital",
+    "price_range": "1500+",
+    "price": "¥2199",
+    "image": "https://img14.360buyimg.com/pop/jfs/t1/184654/39/40125/387491/652e4a16F08abaa5a/f9bbf03c9acad595.png",
+    "tags": [
+      "anniversary",
+      "男生",
+      "运动",
+      "智能穿戴"
+    ],
+    "description": "全方位健康监测和运动追踪，时尚实用。",
+    "reason": "鼓励健康生活，设计简约，适合商务男士。",
+    "source": "小红书热门"
+  },
+  {
+    "name": "LEGO 保时捷 911 RSR 机械组拼装模型",
+    "category": "accessory",
+    "price_range": "500-1500",
+    "price": "¥899",
+    "image": "https://www.fatmike.net/wp-content/uploads/slider/cache/6a5dd9b069ce0a2f9b24338064a9538e/main-lego-porsche-911-gt3-rs-08.jpg",
+    "tags": [
+      "anniversary",
+      "男生",
+      "潮玩",
+      "拼装"
+    ],
+    "description": "高还原度机械组模型，拼装过程中乐趣十足。",
+    "reason": "满足收藏和动手欲望，展示后为家居添彩。",
+    "source": "抖音爆款"
+  },
+  {
+    "name": "Dior Sauvage 旷野男士淡香水 100ml",
+    "category": "beauty",
+    "price_range": "500-1500",
+    "price": "¥750",
+    "image": "http://pic1.yangmatou.com/G02/shangou/M04/AF/61/CgzUCl0rTDmAWXKSAAF53WmjktU136_1_1_n_w_o.jpg",
+    "tags": [
+      "anniversary",
+      "女生",
+      "香水",
+      "浪漫"
+    ],
+    "description": "木质辛辣调香水，成熟性感，适合日常或约会。",
+    "reason": "经典香味，提升自信，适合时髦女性。",
+    "source": "小红书热门"
+  },
+  {
+    "name": "Cartier Love 手镯（玫瑰金）",
+    "category": "accessory",
+    "price_range": "1500+",
+    "price": "¥12800",
+    "image": "https://productimg.xbiao.com/jewellery/16/water/18696148455142629.jpg",
+    "tags": [
+      "anniversary",
+      "女生",
+      "首饰",
+      "奢华"
+    ],
+    "description": "经典锁扣设计，象征永恒爱情，需配螺丝刀佩戴。",
+    "reason": "高级定制感，纪念意义深远，适合奢侈偏好。",
+    "source": "知乎推荐"
+  },
+  {
+    "name": "MUJI 香薰精油套装（野花香型）",
+    "category": "home",
+    "price_range": "100-300",
+    "price": "¥198",
+    "image": "https://img.alicdn.com/imgextra/i4/2038648986/O1CN01ua8mhD2GFe7s8Iong_!!2038648986.jpg",
+    "tags": [
+      "anniversary",
+      "女生",
+      "家居",
+      "香氛"
+    ],
+    "description": "包含精油扩香器，散发自然花香，放松心情。",
+    "reason": "提升居家氛围，温馨实用，适合小情侣。",
+    "source": "天猫热销"
+  },
+  {
+    "name": "Pandora 串珠手链（心形主题）",
+    "category": "accessory",
+    "price_range": "300-500",
+    "price": "¥420",
+    "image": "https://gd-hbimg.huaban.com/3533b53016c1eedbc926317c005d79e39a354101557ac-7c4dxB_fw658webp",
+    "tags": [
+      "anniversary",
+      "女生",
+      "手工",
+      "定制"
+    ],
+    "description": "可自由搭配串珠，心形吊坠为周年纪念款。",
+    "reason": "个性化强，亲手组合更显心意，适合手工爱好者。",
+    "source": "抖音爆款"
+  },
+  {
+    "name": "任天堂Switch OLED",
+    "category": "digital",
+    "price_range": "1500+",
+    "price": "¥2099",
+    "image": "https://switch-cn.gtgres.com/home/_dynamic/img/8173bc5.png",
+    "tags": [
+      "520",
+      "男生",
+      "数码",
+      "游戏"
+    ],
+    "description": "高清OLED屏幕，续航增强，支持掌机/主机双模式",
+    "reason": "适合爱玩游戏的男生，520一起玩《塞尔达》或《马力欧》增加互动",
+    "source": "知乎推荐"
+  },
+  {
+    "name": "索尼WH-1000XM5头戴式降噪耳机",
+    "category": "digital",
+    "price_range": "1500+",
+    "price": "¥2499",
+    "image": "http://img.danews.cc/upload/images/20220901/469913251f4a4e39a04b07b4bf3e03ff.jpg",
+    "tags": [
+      "520",
+      "男生",
+      "数码",
+      "音频"
+    ],
+    "description": "行业顶级降噪，佩戴舒适，支持LDAC高清音质",
+    "reason": "商务出行或游戏必备，降噪体验出色，男生会喜欢的高品质礼物",
+    "source": "天猫热销"
+  },
+  {
+    "name": "阿迪达斯Ultraboost 22跑鞋",
+    "category": "accessory",
+    "price_range": "500-1500",
+    "price": "¥999",
+    "image": "https://gd-hbimg.huaban.com/af09ee6e05a2eaefae8e3766676bb71dad945466f38a2-ZtQjqm_fw658",
+    "tags": [
+      "520",
+      "男生",
+      "运动",
+      "潮牌"
+    ],
+    "description": "Boost中底缓震，透气针织鞋面，适合日常穿搭和慢跑",
+    "reason": "运动男生的刚需，百搭潮鞋，520送他运动动力",
+    "source": "抖音爆款"
+  },
+  {
+    "name": "吉列锋隐5剃须刀礼盒装",
+    "category": "home",
+    "price_range": "100-300",
+    "price": "¥199",
+    "image": "https://img.alicdn.com/bao/uploaded/i3/725677994/O1CN01WDOi4A28vJ1SbLWqe_!!0-item_pic.jpg",
+    "tags": [
+      "520",
+      "男生",
+      "工具",
+      "护肤"
+    ],
+    "description": "5层刀片设计，润滑条+纳米护须网，礼盒含刀架+替换刀头",
+    "reason": "实用日常品，男生每天使用，精致体贴的520礼物",
+    "source": "天猫热销"
+  },
+  {
+    "name": "迪奥Miss Dior花漾淡香水",
+    "category": "beauty",
+    "price_range": "500-1500",
+    "price": "¥899",
+    "image": "https://gd-hbimg.huaban.com/1bd252721652f04bfc35afe306b4f5a1aced7b1e6a8bbf-nlAcsJ_fw658",
+    "tags": [
+      "520",
+      "女生",
+      "香水",
+      "美妆"
+    ],
+    "description": "清新花香调，前调柑橘，中调玫瑰，后调广藿香，持久留香",
+    "reason": "经典女生香，520约会喷上氛围感拉满，优雅不甜腻",
+    "source": "小红书热门"
+  },
+  {
+    "name": "潘多拉Moments串珠手链银制",
+    "category": "accessory",
+    "price_range": "500-1500",
+    "price": "¥799",
+    "image": "https://bkimg.cdn.bcebos.com/pic/caef76094b36acaf2edd308db6969a1001e939013638?x-bce-process=image/resize,m_lfit,w_536,limit_1/quality,Q_70",
+    "tags": [
+      "520",
+      "女生",
+      "首饰",
+      "手工"
+    ],
+    "description": "925银手链，可自由搭配串珠，每颗珠子代表不同回忆",
+    "reason": "寓意“你的故事我收藏”，520专属浪漫，可后续添加节日珠子",
+    "source": "小红书热门"
+  },
+  {
+    "name": "野兽派真丝眼罩礼盒",
+    "category": "home",
+    "price_range": "100-300",
+    "price": "¥268",
+    "image": "https://img.thebeastshop.com/file/app_image/969aa6fe4b48485c80ebcdabc02fb94e.jpg",
+    "tags": [
+      "520",
+      "女生",
+      "家居",
+      "手工"
+    ],
+    "description": "22姆米桑蚕丝，内衬荞麦壳，礼盒含眼罩+香薰喷雾+眼膜",
+    "reason": "助眠神器，提升睡眠幸福感，520送她每晚安心好梦",
+    "source": "知乎推荐"
+  },
+  {
+    "name": "Lola Rose小绿表",
+    "category": "accessory",
+    "price_range": "500-1500",
+    "price": "¥1280",
+    "image": "https://cbu01.alicdn.com/img/ibank/O1CN0138cf2z2IBBBy60whY_!!2200818109247-0-cib.310x310.jpg",
+    "tags": [
+      "520",
+      "女生",
+      "首饰",
+      "时尚"
+    ],
+    "description": "复古绿钢带女表，方形表盘，石英机芯，矿物强化玻璃表镜",
+    "reason": "ins风小众表款，显白提气质，520送她精致腕间装饰",
+    "source": "抖音爆款"
+  },
+  {
+    "name": "罗技 G Pro X Superlight 无线鼠标",
+    "category": "digital",
+    "price_range": "500-1500",
+    "price": "¥899",
+    "image": "https://m.360buyimg.com/babel/jfs/t1/60290/23/23228/38904/638f1624Eb2a0ab25/15b9659367fa98bb.jpg",
+    "tags": [
+      "qixi",
+      "男生",
+      "数码",
+      "游戏"
+    ],
+    "description": "超轻量无线游戏鼠标，专为电竞玩家设计",
+    "reason": "七夕送男友实用又炫酷的礼物，适合爱玩游戏的男生",
+    "source": "知乎推荐"
+  },
+  {
+    "name": "Tom Ford 汤姆·福特 黑管唇膏",
+    "category": "beauty",
+    "price_range": "300-500",
+    "price": "¥430",
+    "image": "http://pic1.yangmatou.com/G02/shangou/M04/A2/D5/CgzUDF2ewD-ANk0gAACLca8Qqbk793_1_1_n_w_o.jpg",
+    "tags": [
+      "qixi",
+      "女生",
+      "美妆",
+      "礼物"
+    ],
+    "description": "经典奢华唇膏，质地丝滑显色持久",
+    "reason": "七夕送女友的精致礼物，彰显品味和心意",
+    "source": "小红书热门"
+  },
+  {
+    "name": "JBL Flip 6 便携蓝牙音箱",
+    "category": "digital",
+    "price_range": "500-1500",
+    "price": "¥899",
+    "image": "https://am.zdmimg.com/202209/24/632ee8c9a61709931.jpg_e1080.jpg",
+    "tags": [
+      "qixi",
+      "男生",
+      "数码",
+      "运动"
+    ],
+    "description": "IP67防水防尘，音质强劲，适合户外运动",
+    "reason": "七夕送给热爱运动和音乐的男友，实用又潮流",
+    "source": "天猫热销"
+  },
+  {
+    "name": "潘多拉 串珠手链 银色",
+    "category": "accessory",
+    "price_range": "500-1500",
+    "price": "¥699",
+    "image": "https://gd-hbimg.huaban.com/9439d5c8c4e8ac2d22be9e4a02c97e2fad920bb22420f-TnK85F_fw658",
+    "tags": [
+      "qixi",
+      "女生",
+      "首饰",
+      "礼物"
+    ],
+    "description": "可自由搭配串珠，打造独一无二的个性手链",
+    "reason": "七夕送礼寓意相伴，每颗串珠代表一段回忆",
+    "source": "小红书热门"
+  },
+  {
+    "name": "诺诗兰 男士运动速干T恤",
+    "category": "home",
+    "price_range": "100-300",
+    "price": "¥199",
+    "image": "https://img.alicdn.com/bao/uploaded/i3/322201563/O1CN01SYFjLl1NPtwEWzVLg_!!322201563.jpg",
+    "tags": [
+      "qixi",
+      "男生",
+      "运动",
+      "服装"
+    ],
+    "description": "轻薄透气速干，适合夏季运动和日常穿搭",
+    "reason": "七夕送男友实用又显贴心的夏日装备",
+    "source": "知乎推荐"
+  },
+  {
+    "name": "Diptyque 玫瑰淡香水 50ml",
+    "category": "beauty",
+    "price_range": "500-1500",
+    "price": "¥1080",
+    "image": "https://gd-hbimg.huaban.com/fbd87736c90eee8a2d9e2d98388e819acd9528dad10df-AIzm2C_fw658webp",
+    "tags": [
+      "qixi",
+      "女生",
+      "香水",
+      "礼物"
+    ],
+    "description": "经典玫瑰花香，清新优雅，留香持久",
+    "reason": "七夕送女士香水，浪漫气息与节日氛围完美契合",
+    "source": "天猫热销"
+  },
+  {
+    "name": "任天堂 Switch OLED 版",
+    "category": "digital",
+    "price_range": "1500+",
+    "price": "¥2599",
+    "image": "https://switch-cn.gtgres.com/home/_dynamic/img/6f72b46.jpg",
+    "tags": [
+      "qixi",
+      "男生",
+      "游戏",
+      "数码"
+    ],
+    "description": "7英寸OLED屏幕，增强画质和音效，便携游戏主机",
+    "reason": "七夕重磅礼物，适合送给爱玩游戏的男友，带来无限快乐",
+    "source": "知乎推荐"
+  },
+  {
+    "name": "L'Occitane 欧舒丹 乳木果护手霜套装",
+    "category": "beauty",
+    "price_range": "100-300",
+    "price": "¥240",
+    "image": "https://pic2.yangmatou.com/cd/shenqiProduct/6534bd8de4c7830b8c91dba1.png",
+    "tags": [
+      "qixi",
+      "女生",
+      "美妆",
+      "家居"
+    ],
+    "description": "含多种香型，滋润不油腻，适合日常护理",
+    "reason": "七夕暖心小礼物，呵护她的双手，传递温柔关爱",
+    "source": "小红书热门"
+  },
+  {
+    "name": "Nintendo Switch OLED 游戏机",
+    "category": "digital",
+    "price_range": "500-1500",
+    "price": "¥1049",
+    "image": "https://switch-cn.gtgres.com/home/_dynamic/img/6f72b46.jpg",
+    "tags": [
+      "daily",
+      "男生",
+      "游戏",
+      "便携"
+    ],
+    "description": "掌机主机一体，随时随地畅玩热门游戏。",
+    "reason": "游戏爱好者必备，提升日常休闲乐趣。",
+    "source": "天猫热销"
+  },
+  {
+    "name": "Adidas 运动鞋 Ultraboost 23",
+    "category": "accessory",
+    "price_range": "500-1500",
+    "price": "¥899",
+    "image": "https://imageads.codoon.com/codoon-aticle/ca045521-b880-11eb-8f9a-01795f417178.jpg!w660!640m0",
+    "tags": [
+      "daily",
+      "男生",
+      "运动",
+      "潮牌"
+    ],
+    "description": "舒适缓震运动鞋，适合日常穿搭和跑步。",
+    "reason": "兼顾时尚与实用，男生日常活动必备。",
+    "source": "小红书热门"
+  },
+  {
+    "name": "Leatherman 多功能工具钳",
+    "category": "custom",
+    "price_range": "300-500",
+    "price": "¥359",
+    "image": "http://i.biopatent.cn/wp-content/uploads/2024/05/MagnaCut2-750x468.jpg",
+    "tags": [
+      "daily",
+      "男生",
+      "工具",
+      "实用"
+    ],
+    "description": "集多种工具于一体，小巧便携。",
+    "reason": "男生日常生活维修和小任务利器。",
+    "source": "知乎推荐"
+  },
+  {
+    "name": "Dior 真我香水 EDP 50ml",
+    "category": "beauty",
+    "price_range": "500-1500",
+    "price": "¥750",
+    "image": "https://a.cdnsbn.com/images/products/l/25552080106-2.jpg",
+    "tags": [
+      "daily",
+      "女生",
+      "香水",
+      "优雅"
+    ],
+    "description": "经典花香调，优雅持久，适合日常使用。",
+    "reason": "提升气质，女生日常必备香氛。",
+    "source": "天猫热销"
+  },
+  {
+    "name": "Pablo 手工编织首饰礼盒",
+    "category": "custom",
+    "price_range": "0-100",
+    "price": "¥79",
+    "image": "https://cbu01.alicdn.com/img/ibank/O1CN019MZCpP1tsokn926bt_!!2218493255958-0-cib.310x310.jpg",
+    "tags": [
+      "daily",
+      "女生",
+      "首饰",
+      "手工"
+    ],
+    "description": "独家设计手工饰品，含项链和手链。",
+    "reason": "独特且贴心，适合制造小惊喜。",
+    "source": "小红书热门"
+  },
+  {
+    "name": "宜家 香薰蜡烛礼盒",
+    "category": "home",
+    "price_range": "100-300",
+    "price": "¥129",
+    "image": "https://cbu01.alicdn.com/img/ibank/O1CN018IPbF31jxGRP15Jfk_!!2218327674614-0-cib.310x310.jpg",
+    "tags": [
+      "daily",
+      "女生",
+      "家居",
+      "放松"
+    ],
+    "description": "多种香味组合，营造温馨居家氛围。",
+    "reason": "日常放松好物，女生喜欢装饰和芳香。",
+    "source": "天猫热销"
+  },
+  {
+    "name": "DIY 手工花束材料包",
+    "category": "experience",
+    "price_range": "0-100",
+    "price": "¥59",
+    "image": "https://img.alicdn.com/bao/uploaded/i4/593713213/O1CN01zm0mbJ1ZbbNnlurLZ_!!593713213.png",
+    "tags": [
+      "daily",
+      "女生",
+      "手工",
+      "创意"
+    ],
+    "description": "包含所有材料，可亲手制作永不凋谢的花束。",
+    "reason": "动手体验乐趣，成果感人且持久。",
+    "source": "小红书热门"
+  }
+]

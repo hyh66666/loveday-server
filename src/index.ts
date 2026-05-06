@@ -6,6 +6,7 @@ import usersRouter from './routes/users';
 import trackRouter from './routes/track';
 import couplesRouter from './routes/couples';
 import bootRouter from './routes/boot';
+import { startCron } from './cron';
 import { db } from './db';
 
 // Auto-seed on first start
@@ -43,4 +44,5 @@ app.get('/api/health', deprecate, (_req, res) => res.json({ status: 'ok', versio
 
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
+  startCron();
 });

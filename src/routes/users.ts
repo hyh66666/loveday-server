@@ -89,12 +89,20 @@ router.delete('/anniversaries/:id', (req: Request, res: Response) => {
   res.json({ success: true });
 });
 
-// POST /api/users/avatar — upload avatar
-router.post('/avatar', upload.single('avatar'), (req: Request, res: Response) => {
+// POST /api/users/avatar — upload + compress avatar
+router.post('/avatar', upload.single('avatar'), async (req: Request, res: Response) => {
   const { user_id } = req.body;
   if (!user_id || !req.file) return res.status(400).json({ error: 'Missing user_id or file' });
 
-  const avatarPath = '/uploads/avatars/' + req.file.filename;
+  // Compress to webp
+  const sharp = (await import('sharp')).default;
+  const compressedPath = req.file.path.replace(/\.\w+$/, '.webp');
+  await sharp(req.file.path)
+    .resize(200, 200, { fit: 'cover' })
+    .webp({ quality: 70 })
+    .toFile(compressedPath);
+
+  const avatarPath = '/uploads/avatars/' + path.basename(compressedPath);
   db.prepare('UPDATE users SET avatar = ? WHERE id = ?').run(avatarPath, user_id);
   res.json({ avatar: avatarPath });
 });

@@ -36,7 +36,29 @@ router.post('/join', (req: Request, res: Response) => {
   if (couple.user1_id == user_id) return res.status(400).json({ error: '不能绑定自己' });
 
   db.prepare('UPDATE couples SET user2_id = ? WHERE id = ?').run(user_id, couple.id);
-  res.json({ success: true, partner_id: couple.user1_id });
+
+  // Sync initiator's relationship date to joiner
+  const initRel = db.prepare('SELECT * FROM relationships WHERE user_id = ?').get(couple.user1_id) as any;
+  if (initRel) {
+    db.prepare(`INSERT OR REPLACE INTO relationships (id, user_id, partner1_name, partner2_name, start_date)
+      VALUES (1, ?, ?, ?, ?)`)
+      .run(user_id, initRel.partner2_name, initRel.partner1_name, initRel.start_date);
+    // Also update initiator's partner1_name to be consistent
+    const joiner = db.prepare('SELECT name FROM users WHERE id = ?').get(user_id) as any;
+    if (joiner?.name) {
+      db.prepare('UPDATE relationships SET partner1_name = ? WHERE user_id = ?').run(initRel.partner1_name, couple.user1_id);
+    }
+  }
+
+  // Get joiner info for response
+  const joinerUser = db.prepare('SELECT name, avatar FROM users WHERE id = ?').get(user_id) as any;
+  const initUser = db.prepare('SELECT name, avatar FROM users WHERE id = ?').get(couple.user1_id) as any;
+
+  res.json({
+    success: true,
+    partner: { id: couple.user1_id, name: initUser?.name || null, avatar: initUser?.avatar || null },
+    joiner: { id: user_id, name: joinerUser?.name || null, avatar: joinerUser?.avatar || null },
+  });
 });
 
 // GET /api/couples/:user_id — get couple info

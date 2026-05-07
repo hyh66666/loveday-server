@@ -32,15 +32,40 @@ router.post('/login', (req: Request, res: Response) => {
     user.name = name;
   }
 
-  // Load relationship
+  // Load relationship + partner info
   const rel = db.prepare('SELECT * FROM relationships WHERE user_id = ?').get(user.id) as any;
+
+  // Get couple/partner info
+  const couple = db.prepare('SELECT * FROM couples WHERE user1_id = ? OR user2_id = ?').get(user.id, user.id) as any;
+  let partner: any = null;
+  if (couple?.user2_id) {
+    const partnerId = couple.user1_id == user.id ? couple.user2_id : couple.user1_id;
+    const partnerUser = db.prepare('SELECT name, avatar FROM users WHERE id = ?').get(partnerId) as any;
+    const partnerRel = db.prepare('SELECT * FROM relationships WHERE user_id = ?').get(partnerId) as any;
+    partner = {
+      id: partnerId,
+      name: partnerUser?.name || null,
+      avatar: partnerUser?.avatar || null,
+      relationship: partnerRel || null,
+    };
+  }
+
   res.json({
-    user: { id: user.id, device_id: user.device_id, name: user.name },
+    user: { id: user.id, device_id: user.device_id, name: user.name, avatar: user.avatar },
     relationship: rel || null,
+    partner,
   });
 });
 
-// POST /api/users/relationship — save relationship
+// PUT /api/users/profile — update name
+router.put('/profile', (req: Request, res: Response) => {
+  const { user_id, name } = req.body;
+  if (!user_id || !name) return res.status(400).json({ error: 'Missing fields' });
+  db.prepare('UPDATE users SET name = ? WHERE id = ?').run(name, user_id);
+  res.json({ success: true });
+});
+
+// POST /api/users/relationship — save (syncs to partner if bound)
 router.post('/relationship', (req: Request, res: Response) => {
   const { user_id, partner1_name, partner2_name, start_date } = req.body;
   if (!user_id || !partner1_name || !partner2_name || !start_date) {
@@ -51,6 +76,15 @@ router.post('/relationship', (req: Request, res: Response) => {
     INSERT OR REPLACE INTO relationships (id, user_id, partner1_name, partner2_name, start_date)
     VALUES (1, ?, ?, ?, ?)
   `).run(user_id, partner1_name, partner2_name, start_date);
+
+  // Sync to partner if bound
+  const couple = db.prepare('SELECT * FROM couples WHERE (user1_id = ? OR user2_id = ?) AND user2_id IS NOT NULL')
+    .get(user_id, user_id) as any;
+  if (couple) {
+    const partnerId = couple.user1_id == user_id ? couple.user2_id : couple.user1_id;
+    db.prepare(`INSERT OR REPLACE INTO relationships (id, user_id, partner1_name, partner2_name, start_date)
+      VALUES (1, ?, ?, ?, ?)`).run(partnerId, partner2_name, partner1_name, start_date);
+  }
 
   res.json({ success: true });
 });

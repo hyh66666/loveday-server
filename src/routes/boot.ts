@@ -18,11 +18,14 @@ router.get('/', (req: Request, res: Response) => {
   let coupleData: any = null;
   if (couple) {
     const partnerId = couple.user1_id == userId ? couple.user2_id : couple.user1_id;
-    const partner = partnerId ? db.prepare('SELECT name, avatar FROM users WHERE id = ?').get(partnerId) as any : null;
+    const partnerUser = partnerId ? db.prepare('SELECT name, avatar FROM users WHERE id = ?').get(partnerId) as any : null;
+    const partnerRel = partnerId ? db.prepare('SELECT * FROM relationships WHERE user_id = ?').get(partnerId) as any : null;
     coupleData = {
       invite_code: couple.invite_code,
       partner_id: partnerId,
-      partner_name: partner?.name || null,
+      partner_name: partnerUser?.name || null,
+      partner_avatar: partnerUser?.avatar || null,
+      partner_relationship: partnerRel || null,
       is_bound: !!couple.user2_id,
     };
   }

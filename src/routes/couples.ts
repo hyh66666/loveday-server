@@ -37,27 +37,30 @@ router.post('/join', (req: Request, res: Response) => {
 
   db.prepare('UPDATE couples SET user2_id = ? WHERE id = ?').run(user_id, couple.id);
 
-  // Sync initiator's relationship date to joiner
-  const initRel = db.prepare('SELECT * FROM relationships WHERE user_id = ?').get(couple.user1_id) as any;
-  if (initRel) {
-    db.prepare(`INSERT OR REPLACE INTO relationships (id, user_id, partner1_name, partner2_name, start_date)
-      VALUES (1, ?, ?, ?, ?)`)
-      .run(user_id, initRel.partner2_name, initRel.partner1_name, initRel.start_date);
-    // Also update initiator's partner1_name to be consistent
-    const joiner = db.prepare('SELECT name FROM users WHERE id = ?').get(user_id) as any;
-    if (joiner?.name) {
-      db.prepare('UPDATE relationships SET partner1_name = ? WHERE user_id = ?').run(initRel.partner1_name, couple.user1_id);
-    }
-  }
-
-  // Get joiner info for response
+  // Get both users' info
   const joinerUser = db.prepare('SELECT name, avatar FROM users WHERE id = ?').get(user_id) as any;
   const initUser = db.prepare('SELECT name, avatar FROM users WHERE id = ?').get(couple.user1_id) as any;
+  const initRel = db.prepare('SELECT * FROM relationships WHERE user_id = ?').get(couple.user1_id) as any;
+
+  // Sync relationship to joiner: use initiator's date, joiner's own name + initiator's name
+  const joinerName = joinerUser?.name || '';
+  const initName = initUser?.name || '';
+  const startDate = initRel?.start_date || '';
+
+  db.prepare(`INSERT OR REPLACE INTO relationships (id, user_id, partner1_name, partner2_name, start_date)
+    VALUES (1, ?, ?, ?, ?)`)
+    .run(user_id, joinerName, initName, startDate);
+
+  // Update initiator's partner2_name to joiner's real name
+  if (joinerName && initRel) {
+    db.prepare('UPDATE relationships SET partner2_name = ? WHERE user_id = ?')
+      .run(joinerName, couple.user1_id);
+  }
 
   res.json({
     success: true,
-    partner: { id: couple.user1_id, name: initUser?.name || null, avatar: initUser?.avatar || null },
-    joiner: { id: user_id, name: joinerUser?.name || null, avatar: joinerUser?.avatar || null },
+    partner: { id: couple.user1_id, name: initName || null, avatar: initUser?.avatar || null },
+    joiner: { id: user_id, name: joinerName || null, avatar: joinerUser?.avatar || null },
   });
 });
 
@@ -68,12 +71,13 @@ router.get('/:user_id', (req: Request, res: Response) => {
   if (!couple) return res.json(null);
 
   const partnerId = couple.user1_id == req.params.user_id ? couple.user2_id : couple.user1_id;
-  const partner = partnerId ? db.prepare('SELECT name FROM users WHERE id = ?').get(partnerId) as any : null;
+  const partner = partnerId ? db.prepare('SELECT name, avatar FROM users WHERE id = ?').get(partnerId) as any : null;
 
   res.json({
     invite_code: couple.invite_code,
     partner_id: partnerId,
     partner_name: partner?.name || null,
+    partner_avatar: partner?.avatar || null,
     is_bound: !!couple.user2_id,
   });
 });

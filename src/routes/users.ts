@@ -32,6 +32,15 @@ router.post('/login', (req: Request, res: Response) => {
     user.name = name;
   }
 
+  // Auto-set name from relationship if not yet set
+  if (!user.name) {
+    const rel = db.prepare('SELECT partner1_name FROM relationships WHERE user_id = ?').get(user.id) as any;
+    if (rel?.partner1_name) {
+      db.prepare('UPDATE users SET name = ? WHERE id = ?').run(rel.partner1_name, user.id);
+      user.name = rel.partner1_name;
+    }
+  }
+
   // Load relationship + partner info
   const rel = db.prepare('SELECT * FROM relationships WHERE user_id = ?').get(user.id) as any;
 

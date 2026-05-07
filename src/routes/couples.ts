@@ -49,26 +49,17 @@ router.post('/join', (req: Request, res: Response) => {
   const initUser = db.prepare('SELECT id, name, avatar FROM users WHERE id = ?').get(couple.user1_id) as any;
   const initRel = db.prepare('SELECT * FROM relationships WHERE user_id = ?').get(couple.user1_id) as any;
 
-  // Sync relationship to joiner: use initiator's date, joiner's own name + initiator's name
-  const joinerName = joinerUser?.name || '';
-  const initName = initUser?.name || '';
-  const startDate = initRel?.start_date || '';
-
-  db.prepare(`INSERT OR REPLACE INTO relationships (id, user_id, partner1_name, partner2_name, start_date)
-    VALUES (1, ?, ?, ?, ?)`)
-    .run(user_id, joinerName, initName, startDate);
-
-  // Update initiator's partner2_name to joiner's real name
-  if (joinerName && initRel) {
-    db.prepare('UPDATE relationships SET partner2_name = ? WHERE user_id = ?')
-      .run(joinerName, couple.user1_id);
+  // Sync initiator's relationship to joiner
+  if (initRel?.start_date) {
+    const jName = joinerUser?.name || '';
+    const iName = initUser?.name || '';
+    db.prepare(`INSERT OR REPLACE INTO relationships (id, user_id, partner1_name, partner2_name, start_date)
+      VALUES (1, ?, ?, ?, ?)`).run(user_id, jName || '我', iName || 'TA', initRel.start_date);
+    // Update initiator's partner2_name to joiner
+    if (jName) db.prepare('UPDATE relationships SET partner2_name = ? WHERE user_id = ?').run(jName, couple.user1_id);
   }
 
-  res.json({
-    success: true,
-    partner: { id: couple.user1_id, name: initName || null, avatar: initUser?.avatar || null },
-    joiner: { id: user_id, name: joinerName || null, avatar: joinerUser?.avatar || null },
-  });
+  res.json({ success: true });
 });
 
 // GET /api/couples/:user_id — get couple info

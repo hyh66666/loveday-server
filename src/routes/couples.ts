@@ -32,7 +32,8 @@ router.post('/create', (req: Request, res: Response) => {
 
 // POST /api/couples/join — join via invite code (user2)
 router.post('/join', (req: Request, res: Response) => {
-  const { user_id, invite_code } = req.body;
+  const user_id = Number(req.body.user_id);
+  const { invite_code } = req.body;
   if (!user_id || !invite_code) return res.status(400).json({ error: 'Missing fields' });
 
   const couple = db.prepare('SELECT * FROM couples WHERE invite_code = ? AND user2_id IS NULL')
@@ -41,11 +42,12 @@ router.post('/join', (req: Request, res: Response) => {
   if (!couple) return res.status(404).json({ error: '邀请码无效或已被使用' });
   if (couple.user1_id == user_id) return res.status(400).json({ error: '不能绑定自己' });
 
-  db.prepare('UPDATE couples SET user2_id = ? WHERE id = ?').run(user_id, couple.id);
+  db.prepare('UPDATE couples SET user2_id = ? WHERE id = ?').run(Number(user_id), couple.id);
 
   // Get both users' info
-  const joinerUser = db.prepare('SELECT name, avatar FROM users WHERE id = ?').get(user_id) as any;
+  const joinerUser = db.prepare('SELECT name, avatar FROM users WHERE id = ?').get(Number(user_id)) as any;
   const initUser = db.prepare('SELECT name, avatar FROM users WHERE id = ?').get(couple.user1_id) as any;
+  console.log('[Join] Joiner user:', JSON.stringify(joinerUser), 'Init user:', JSON.stringify(initUser));
   const initRel = db.prepare('SELECT * FROM relationships WHERE user_id = ?').get(couple.user1_id) as any;
 
   // Sync relationship to joiner: use initiator's date, joiner's own name + initiator's name

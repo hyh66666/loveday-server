@@ -99,4 +99,8 @@ db.exec(`
   CREATE INDEX IF NOT EXISTS idx_couples_code ON couples(invite_code);
 `);
 
+// Migrations: add columns that may be missing on older DBs
+try { db.exec('ALTER TABLE users ADD COLUMN avatar TEXT'); } catch {}
+try { db.exec('ALTER TABLE users ADD COLUMN name TEXT'); } catch {}
+
 console.log('[DB] Initialized');

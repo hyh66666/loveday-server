@@ -9,14 +9,20 @@ router.post('/create', (req: Request, res: Response) => {
   const { user_id } = req.body;
   if (!user_id) return res.status(400).json({ error: 'user_id required' });
 
-  // Check if already in a couple
-  const existing = db.prepare('SELECT * FROM couples WHERE user1_id = ? OR user2_id = ?').get(user_id, user_id) as any;
+  // Check if already in an active bound couple
+  const existing = db.prepare('SELECT * FROM couples WHERE (user1_id = ? OR user2_id = ?) AND user2_id IS NOT NULL').get(user_id, user_id) as any;
   if (existing) {
     return res.json({
       couple: existing,
       invite_code: existing.invite_code,
       partner_id: existing.user1_id == user_id ? existing.user2_id : existing.user1_id,
+      is_bound: true,
     });
+  }
+  // Check for pending invite
+  const pending = db.prepare('SELECT * FROM couples WHERE user1_id = ? AND user2_id IS NULL').get(user_id) as any;
+  if (pending) {
+    return res.json({ invite_code: pending.invite_code, partner_id: null, is_bound: false });
   }
 
   const code = crypto.randomBytes(3).toString('hex').toUpperCase();
